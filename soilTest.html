@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BhoomIQ Soil Test</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#169c1d",
+            "background-light": "#f6f8f6",
+            "background-dark": "#112112",
+          },
+          fontFamily: {
+            "display": ["Work Sans"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 1,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 48
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100 dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-screen flex-col justify-between overflow-hidden">
+<header class="flex items-center p-4">
+    <a href = "landing.html">
+<button class="text-background-dark dark:text-background-light">
+<span class="material-symbols-outlined">arrow_back</span>
+</button></a>
+<h1 class="flex-1 text-center text-lg font-bold text-background-dark dark:text-background-light pr-8">Soil Test</h1>
+</header>
+<main class="flex flex-1 flex-col items-center justify-start text-center px-6 pt-8">
+<div class="flex flex-col items-center gap-8 w-full">
+<div class="flex flex-col items-center gap-2">
+<h2 class="text-2xl font-bold text-background-dark dark:text-background-light">No Active Soil Tests</h2>
+<p class="text-sm text-background-dark/70 dark:text-background-light/70 max-w-sm">
+            Schedule a new soil test to get the latest insights on your farm's health.
+          </p>
+</div>
+<div class="w-full bg-white dark:bg-background-dark/50 rounded-xl p-4 shadow-md">
+<h3 class="text-lg font-bold text-left text-background-dark dark:text-background-light mb-4">Past Report</h3>
+<div class="grid grid-cols-2 gap-4 text-left">
+<div class="flex items-center gap-2">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/50">
+<span class="material-symbols-outlined text-blue-500 dark:text-blue-300" style="font-size: 24px;">
+                  water_drop
+                </span>
+</div>
+<div>
+<p class="text-sm text-background-dark/70 dark:text-background-light/70">Water Level</p>
+<p class="font-bold text-background-dark dark:text-background-light">60%</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-orange-100 dark:bg-orange-900/50">
+<span class="material-symbols-outlined text-orange-500 dark:text-orange-300" style="font-size: 24px;">
+                  science
+                </span>
+</div>
+<div>
+<p class="text-sm text-background-dark/70 dark:text-background-light/70">pH Level</p>
+<p class="font-bold text-background-dark dark:text-background-light">7</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="p-6">
+<button class="w-full rounded-lg bg-primary py-3 text-base font-bold text-white shadow-lg shadow-primary/30">
+        Reschedule Test
+      </button>
+</footer>
+</div>
+
+</body></html>

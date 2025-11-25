@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BhoomIQ - Seminar Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#169c1d",
+              "background-light": "#f6f8f6",
+              "background-dark": "#112112",
+            },
+            fontFamily: {
+              display: ["Work Sans"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex h-screen flex-col justify-between">
+<main class="flex-grow overflow-y-auto">
+<header class="sticky top-0 z-10 flex items-center border-b border-primary/20 bg-background-light px-4 py-3 dark:bg-background-dark">
+    <a href = "landing.html">
+<button class="text-background-dark dark:text-background-light">
+<span class="material-symbols-outlined">arrow_back</span>
+</button></a>
+<h1 class="flex-1 text-center text-lg font-bold text-background-dark dark:text-background-light">Seminar Details</h1>
+<div class="w-6"></div>
+</header>
+<div class="p-6">
+<h2 class="text-2xl font-bold text-background-dark dark:text-background-light">Soil Health and Sustainable Farming Practices</h2>
+<div class="mt-6 space-y-4">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined mt-1 text-primary">calendar_month</span>
+<div>
+<p class="font-semibold text-background-dark dark:text-background-light">Date</p>
+<p class="text-background-dark/80 dark:text-background-light/80">20th November 2025</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined mt-1 text-primary">schedule</span>
+<div>
+<p class="font-semibold text-background-dark dark:text-background-light">Time</p>
+<p class="text-background-dark/80 dark:text-background-light/80">10:00 AM - 12:00 PM</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined mt-1 text-primary">location_on</span>
+<div>
+<p class="font-semibold text-background-dark dark:text-background-light">Location</p>
+<p class="text-background-dark/80 dark:text-background-light/80">Village: Rampur</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined mt-1 text-primary">local_library</span>
+<div>
+<p class="font-semibold text-background-dark dark:text-background-light">Topics</p>
+<p class="text-background-dark/80 dark:text-background-light/80">Soil testing, organic farming, water conservation</p>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<button class="w-full rounded-lg bg-primary py-3 text-center text-base font-bold text-white transition-opacity hover:opacity-90">I'm Interested</button>
+</div>
+</div>
+</main>
+<footer class="sticky bottom-0 border-t border-primary/20 bg-background-light dark:border-primary/30 dark:bg-background-dark">
+<nav class="flex justify-around px-4 py-2">
+<a class="flex flex-col items-center gap-1 text-background-dark/60 dark:text-background-light/60" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">grass</span>
+<span class="text-xs font-medium">Seminars</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-background-dark/60 dark:text-background-light/60" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-xs font-medium">Settings</span>
+</a>
+</nav>
+</footer>
+</div>
+
+
+</body></html>

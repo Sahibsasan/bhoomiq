@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>BhoomIQ - Sell My Crop</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#169c1d",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#112112",
+                        "text-light": "#112112",
+                        "text-dark": "#f6f8f6",
+                        "text-muted-light": "#546e56",
+                        "text-muted-dark": "#a0bfa2",
+                        "input-light": "#e9f0ea",
+                        "input-dark": "#1e341f",
+                        "border-light": "#dde5de",
+                        "border-dark": "#2a4d2c"
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+            overflow-y: auto;
+        }
+        .form-select {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23546e56' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 0.5rem center;
+            background-repeat: no-repeat;
+            background-size: 1.5em 1.5em;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        .dark .form-select {
+             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23a0bfa2' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display">
+    <div class="flex flex-col min-h-screen justify-between">
+        <main class="flex-grow">
+            <header class="p-4 flex items-center">
+                <a href="landing.html">
+                    <button class="text-background-dark dark:text-background-light">
+                        <span class="material-symbols-outlined">arrow_back</span>
+                    </button>
+                </a>
+                <h1 class="text-lg font-bold text-text-light dark:text-text-dark text-center flex-grow -ml-10">Sell My Crop</h1>
+            </header>
+            <div class="p-4 space-y-6">
+                
+                <div>
+                    <label class="block text-sm font-medium text-text-muted-light dark:text-text-muted-dark mb-2" for="crop-name">Crop Name</label>
+                    <div class="relative">
+                        <input class="form-input w-full bg-input-light dark:bg-input-dark border-none rounded-lg h-16 pl-4 pr-12 text-text-light dark:text-text-dark placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark focus:ring-2 focus:ring-primary" id="crop-name" name="crop-name" placeholder="e.g., Basmati Rice" type="text" />
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-text-muted-light dark:text-text-muted-dark mb-2" for="crop-type">Crop Type</label>
+                    <div class="relative">
+                        <select class="form-select appearance-none w-full bg-input-light dark:bg-input-dark border-none rounded-lg h-16 pl-4 text-text-light dark:text-text-dark focus:ring-2 focus:ring-primary" id="crop-type" name="crop-type">
+                            <option disabled selected>Select a type</option>
+                            <option>Wheat</option>
+                            <option>Rice</option>
+                            <option>Sugarcane</option>
+                            <option>Cotton</option>
+                            <option>Maize</option>
+                            <option>Vegetable</option>
+                            <option>Fruit</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div>
+                     <label class="block text-sm font-medium text-text-muted-light dark:text-text-muted-dark mb-2" for="crop-photo">Crop Photo</label>
+                     <label for="crop-photo" class="flex flex-col items-center justify-center w-full h-32 border-2 border-border-light dark:border-border-dark border-dashed rounded-lg cursor-pointer bg-input-light dark:bg-input-dark hover:bg-gray-200 dark:hover:bg-gray-800">
+                         <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                            <span class="material-symbols-outlined text-4xl text-text-muted-light dark:text-text-muted-dark">cloud_upload</span>
+                             <p class="mb-2 text-sm text-text-muted-light dark:text-text-muted-dark"><span class="font-semibold">Click to upload</span> or drag and drop</p>
+                             <p class="text-xs text-text-muted-light dark:text-text-muted-dark">PNG, JPG or GIF (MAX. 800x400px)</p>
+                         </div>
+                         <input id="crop-photo" type="file" class="hidden" />
+                     </label>
+                     <p id="file-name-display" class="mt-2 text-sm text-text-muted-light dark:text-text-muted-dark"></p>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-text-muted-light dark:text-text-muted-dark mb-2" for="price">Price per unit (₹)</label>
+                    <div class="relative">
+                        <input class="form-input w-full bg-input-light dark:bg-input-dark border-none rounded-lg h-16 pl-4 pr-12 text-text-light dark:text-text-dark placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark focus:ring-2 focus:ring-primary" id="price" name="price" placeholder="e.g., 20" type="number" />
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-text-muted-light dark:text-text-muted-dark mb-2" for="quantity">Total amount/quantity (kg)</label>
+                    <div class="relative">
+                        <input class="form-input w-full bg-input-light dark:bg-input-dark border-none rounded-lg h-16 pl-4 pr-12 text-text-light dark:text-text-dark placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark focus:ring-2 focus:ring-primary" id="quantity" name="quantity" placeholder="e.g., 500" type="number" />
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-medium text-text-muted-light dark:text-text-muted-dark mb-2">Total Price</label>
+                    <div class="flex items-center w-full bg-input-light dark:bg-input-dark border-2 border-dashed border-border-light dark:border-border-dark rounded-lg h-16 px-4">
+                        <span class="text-xl font-bold text-primary" id="total-price-display">₹ 0.00</span>
+                    </div>
+                </div>
+
+                <div>
+                    <button class="w-full bg-primary text-white rounded-lg h-14 text-base font-bold flex items-center justify-center"> Submit Offer </button>
+                </div>
+                </div>
+        </main>
+        <nav class="border-t border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark p-2 sticky bottom-0">
+            <div class="flex justify-around items-center">
+                <a class="flex flex-col items-center gap-1 text-text-muted-light dark:text-text-muted-dark w-1/3" href="#">
+                    <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                        <path d="M9 22V12H15V22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                    </svg>
+                    <span class="text-xs font-medium">Home</span>
+                </a>
+                <a class="flex flex-col items-center gap-1 text-primary w-1/3" href="#">
+                    <svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 3H3V10H10V3Z"></path>
+                        <path d="M21 3H14V10H21V3Z"></path>
+                        <path d="M21 14H14V21H21V14Z"></path>
+                        <path d="M10 14H3V21H10V14Z"></path>
+                    </svg>
+                    <span class="text-xs font-medium">Services</span>
+                </a>
+                <a class="flex flex-col items-center gap-1 text-text-muted-light dark:text-text-muted-dark w-1/3" href="#">
+                    <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.4 15L18.9 14.5C18.7 14.3 18.6 14.1 18.6 13.8V13.2C18.6 12.9 18.7 12.7 18.9 12.5L19.4 12L20.5 13.1C20.6 13.2 20.6 13.5 20.5 13.6L19.4 15ZM4.6 15L4.1 14.5C3.9 14.3 3.8 14.1 3.8 13.8V13.2C3.8 12.9 3.9 12.7 4.1 12.5L4.6 12L5.5 13.1C5.6 13.2 5.6 13.5 5.5 13.6L4.6 15Z" stroke="currentColor" stroke-width="2"></path>
+                        <path d="M14 19.4L14.5 18.9C14.7 18.7 14.9 18.6 15.2 18.6H15.8C16.1 18.6 16.3 18.7 16.5 18.9L17 19.4L15.9 20.5C15.8 20.6 15.5 20.6 15.4 20.5L14 19.4ZM9 5.4L9.5 4.9C9.7 4.7 9.9 4.6 10.2 4.6H10.8C11.1 4.6 11.3 4.7 11.5 4.9L12 5.4L10.9 6.5C10.8 6.6 10.5 6.6 10.4 6.5L9 5.4Z" stroke="currentColor" stroke-width="2"></path>
+                        <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="currentColor" stroke-width="2"></path>
+                        <path d="M21.16 8.84L22 8.5V7.5L20.84 7.16C20.66 6.58 20.36 6.06 19.94 5.62L20.5 4.5L19.5 3.5L18.38 4.06C17.94 3.64 17.42 3.34 16.84 3.16L16.5 2H15.5L15.16 3.16C14.58 3.34 14.06 3.64 13.62 4.06L12.5 3.5L11.5 4.5L12.06 5.62C11.64 6.06 11.34 6.58 11.16 7.16L10 7.5V8.5L11.16 8.84C11.34 9.42 11.64 9.94 12.06 10.38L11.5 11.5L12.5 12.5L13.62 11.94C14.06 12.36 14.58 12.66 15.16 12.84L15.5 14H16.5L16.84 12.84C17.42 12.66 17.94 12.36 18.38 11.94L19.5 12.5L20.5 11.5L19.94 10.38C20.36 9.94 20.66 9.42 20.84 8.84H21.16Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                    </svg>
+                    <span class="text-xs font-medium">Settings</span>
+                </a>
+            </div>
+            <div class="h-3 bg-background-light dark:bg-background-dark"></div>
+        </nav>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Price calculation script
+            const priceInput = document.getElementById('price');
+            const quantityInput = document.getElementById('quantity');
+            const totalPriceDisplay = document.getElementById('total-price-display');
+
+            function calculateTotal() {
+                const price = parseFloat(priceInput.value) || 0;
+                const quantity = parseFloat(quantityInput.value) || 0;
+                const total = price * quantity;
+
+                const formattedTotal = new Intl.NumberFormat('en-IN', {
+                    style: 'currency',
+                    currency: 'INR',
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                }).format(total);
+
+                totalPriceDisplay.textContent = formattedTotal;
+            }
+
+            priceInput.addEventListener('input', calculateTotal);
+            quantityInput.addEventListener('input', calculateTotal);
+
+            // File upload script
+            const fileInput = document.getElementById('crop-photo');
+            const fileNameDisplay = document.getElementById('file-name-display');
+
+            fileInput.addEventListener('change', () => {
+                if (fileInput.files.length > 0) {
+                    fileNameDisplay.textContent = `Selected file: ${fileInput.files[0].name}`;
+                } else {
+                    fileNameDisplay.textContent = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

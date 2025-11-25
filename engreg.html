@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>BhoomIQ User Registration</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#15931b",
+              "background-light": "#f6f8f6",
+              "background-dark": "#112112",
+              "text-light": "#112112",
+              "text-dark": "#f6f8f6",
+              "input-light": "#E9EFEA",
+              "input-dark": "#1A2E1B",
+              "placeholder-light": "#6B8A6E",
+              "placeholder-dark": "#89A68C"
+            },
+            fontFamily: {
+              "display": ["Noto Serif", "sans-serif"]
+            },
+            borderRadius: {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+          },
+        },
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+      /* Removed redundant and unnecessary body styles for simplicity */
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display">
+    <div class="flex flex-col min-h-screen justify-between p-6">
+        <div class="space-y-8">
+            <header class="flex items-center justify-center relative">
+                <button class="absolute left-0 text-text-light dark:text-text-dark"><a href = "lang.html">
+            <span class="material-symbols-outlined text-3xl">
+              arrow_back
+            </span></a>
+          </button>
+                <h1 class="text-2xl font-bold text-text-light dark:text-text-dark">BhoomIQ</h1>
+            </header>
+            <main class="space-y-6">
+                <h2 class="text-4xl font-bold text-text-light dark:text-text-dark">Register</h2>
+                <div class="space-y-4">
+                    <div class="relative">
+                        <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-placeholder-light dark:text-placeholder-dark text-3xl">person</span>
+                        <input class="w-full bg-input-light dark:bg-input-dark text-text-light dark:text-text-dark placeholder-placeholder-light dark:placeholder-placeholder-dark border-0 rounded-xl py-5 pl-16 pr-4 focus:ring-2 focus:ring-primary h-16 text-lg" placeholder="Full Name" type="text" />
+                    </div>
+                    <div class="relative">
+                        <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-placeholder-light dark:text-placeholder-dark text-3xl">phone_iphone</span>
+                        <input class="w-full bg-input-light dark:bg-input-dark text-text-light dark:text-text-dark placeholder-placeholder-light dark:placeholder-placeholder-dark border-0 rounded-xl py-5 pl-16 pr-4 focus:ring-2 focus:ring-primary h-16 text-lg" placeholder="Phone Number" type="tel" />
+                    </div>
+                </div>
+                <div class="space-y-4 text-center p-4 bg-primary/10 dark:bg-primary/20 rounded-xl">
+                    <div class="flex justify-center">
+                        <div class="p-4 bg-primary/20 dark:bg-primary/30 rounded-full">
+                            <span class="material-symbols-outlined text-primary text-5xl">location_on</span>
+                        </div>
+                    </div>
+                    <p id="locationStatus" class="text-text-light dark:text-text-dark/80 text-base">We need your location to provide accurate weather and market information.</p>
+                    
+                    <button id="allowLocationBtn" class="w-full bg-primary/20 dark:bg-primary/30 text-primary font-bold py-4 rounded-xl text-lg">Allow Location Access</button>
+                    
+                    <div class="flex items-center space-x-4">
+                        <hr class="flex-grow border-placeholder-light/50 dark:border-placeholder-dark/50" />
+                        <span class="text-placeholder-light dark:text-placeholder-dark">OR</span>
+                        <hr class="flex-grow border-placeholder-light/50 dark:border-placeholder-dark/50" />
+                    </div>
+                    <div class="relative">
+                        <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-placeholder-light dark:text-placeholder-dark text-3xl">edit_location</span>
+                        
+                        <input id="locationInput" class="w-full bg-input-light dark:bg-input-dark text-text-light dark:text-text-dark placeholder-placeholder-light dark:placeholder-placeholder-dark border-0 rounded-xl py-5 pl-16 pr-4 focus:ring-2 focus:ring-primary h-16 text-lg" placeholder="Enter Location Manually" type="text" />
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div class="pb-4">
+            <a href ="landing.html">
+            <button class="w-full bg-primary text-white font-bold py-5 rounded-xl text-xl shadow-lg shadow-primary/30">Register</button></a>
+        </div>
+    </div>
+
+    <script>
+        const allowLocationBtn = document.getElementById('allowLocationBtn');
+        const locationInput = document.getElementById('locationInput');
+        const locationStatus = document.getElementById('locationStatus');
+
+        allowLocationBtn.addEventListener('click', () => {
+            if (navigator.geolocation) {
+                locationStatus.textContent = 'Requesting location permission...';
+                navigator.geolocation.getCurrentPosition(success, error);
+            } else {
+                locationStatus.textContent = 'Geolocation is not supported by your browser.';
+            }
+        });
+
+        function success(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            locationStatus.textContent = 'Fetching your address...';
+            
+            // Use OpenStreetMap's free Nominatim API for reverse geocoding
+            const apiURL = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`;
+
+            fetch(apiURL)
+                .then(response => response.json())
+                .then(data => {
+                    if (data && data.display_name) {
+                        locationInput.value = data.display_name; // Put the address in the input box
+                        locationStatus.textContent = 'Location found successfully!';
+                    } else {
+                        locationInput.value = `Lat: ${latitude}, Lon: ${longitude}`;
+                        locationStatus.textContent = 'Could not find address, coordinates saved.';
+                    }
+                })
+                .catch(() => {
+                    error();
+                    locationStatus.textContent = 'Failed to fetch address from coordinates.';
+                });
+        }
+
+        function error() {
+            locationStatus.textContent = 'Unable to retrieve your location. Please check your browser settings.';
+        }
+    </script>
+</body>
+</html>

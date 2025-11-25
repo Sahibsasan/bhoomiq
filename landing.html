@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BhoomIQ Home</title>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#15931b",
+            "background-light": "#f6f8f6",
+            "background-dark": "#112112",
+          },
+          fontFamily: {
+            "display": ["Work Sans"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex flex-col min-h-screen">
+<header class="flex items-center justify-between p-4 bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200">
+<h1 class="text-2xl font-bold">Hello, Ramesh</h1>
+<div class="flex items-center space-x-2">
+    <a href ="notification.html">
+<button class="flex items-center justify-center size-10 rounded-full bg-primary/10 dark:bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+</button></a>
+<button class="flex items-center justify-center size-10 rounded-full bg-primary/10 dark:bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-2xl">person</span>
+</button>
+</div>
+</header>
+<div class="px-4 pb-4">
+<div class="flex items-center justify-between p-4 bg-blue-100 dark:bg-blue-900/30 rounded-xl text-gray-800 dark:text-gray-200">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-4xl text-blue-500 mr-4">cloudy</span>
+<div>
+<p class="font-bold text-lg">28°C, Sunny</p>
+<p class="text-sm">Pune, Maharashtra</p>
+</div>
+</div>
+<a class="text-primary font-semibold text-sm" href="weather.html">View Details</a>
+</div>
+</div>
+<main class="flex-grow p-4 grid grid-cols-2 gap-4">
+<a class="flex flex-col items-center justify-center p-3 bg-green-100 dark:bg-green-900/30 rounded-xl aspect-square text-gray-800 dark:text-gray-200" href="soilTest.html">
+<span class="material-symbols-outlined text-6xl text-green-700 dark:text-green-300" style="font-variation-settings: 'FILL' 1">science</span>
+<span class="font-bold mt-2">Soil Test</span>
+</a>
+<a class="flex flex-col items-center justify-center p-3 bg-red-100 dark:bg-red-900/30 rounded-xl aspect-square text-gray-800 dark:text-gray-200" href="cropDoc.html">
+<span class="material-symbols-outlined text-6xl text-red-700 dark:text-red-300" style="font-variation-settings: 'FILL' 1">local_florist</span>
+<span class="font-bold mt-2">Crop Doctor</span>
+</a>
+<a class="flex flex-col items-center justify-center p-3 bg-yellow-100 dark:bg-yellow-900/30 rounded-xl aspect-square text-gray-800 dark:text-gray-200" href="markPrice.html">
+<span class="material-symbols-outlined text-6xl text-yellow-700 dark:text-yellow-300" style="font-variation-settings: 'FILL' 1">monitoring</span>
+<span class="font-bold mt-2">Market Prices</span>
+</a>
+<a class="flex flex-col items-center justify-center p-3 bg-primary/20 dark:bg-primary/30 rounded-xl aspect-square text-gray-800 dark:text-gray-200" href="calender.html">
+    <span class="material-symbols-outlined text-6xl text-primary" style="font-variation-settings: 'FILL' 1">calendar_month</span>
+    <span class="font-bold mt-2">Calendar</span>
+</a>
+</a>
+<a class="flex flex-col items-center justify-center p-3 bg-indigo-100 dark:bg-indigo-900/30 rounded-xl aspect-square text-gray-800 dark:text-gray-200" href="chatbot.html">
+<span class="material-symbols-outlined text-6xl text-indigo-700 dark:text-indigo-300" style="font-variation-settings: 'FILL' 1">support_agent</span>
+<span class="font-bold mt-2">Ask an Expert</span>
+</a>
+<a class="flex flex-col items-center justify-center p-3 bg-purple-100 dark:bg-purple-900/30 rounded-xl aspect-square text-gray-800 dark:text-gray-200" href="myfarm.html">
+<span class="material-symbols-outlined text-6xl text-purple-700 dark:text-purple-300" style="font-variation-settings: 'FILL' 1">grass</span>
+<span class="font-bold mt-2">My Farm</span>
+</a>
+<a class="flex flex-col items-center justify-center p-3 bg-pink-100 dark:bg-pink-900/30 rounded-xl aspect-square text-gray-800 dark:text-gray-200" href="semiDetail.html">
+<span class="material-symbols-outlined text-6xl text-pink-700 dark:text-pink-300" style="font-variation-settings: 'FILL' 1">campaign</span>
+<span class="font-bold mt-2">Seminars</span>
+</a>
+<a class="flex flex-col items-center justify-center p-3 bg-orange-100 dark:bg-orange-900/30 rounded-xl aspect-square text-gray-800 dark:text-gray-200" href="shop.html">
+<span class="material-symbols-outlined text-6xl text-orange-700 dark:text-orange-300" style="font-variation-settings: 'FILL' 1">shopping_cart</span>
+<span class="font-bold mt-2">Buy Farming items</span>
+</a>
+</main>
+<footer class="sticky bottom-0 bg-background-light dark:bg-background-dark border-t border-primary/20 dark:border-primary/30">
+<nav class="flex justify-around p-2">
+<a class="flex flex-col items-center gap-1 text-primary w-1/3" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400 w-1/3" href="news.html">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="text-xs font-medium">News</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-gray-500 dark:text-gray-400 w-1/3" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-xs font-medium">Settings</span>
+</a>
+</nav>
+</footer>
+</div>
+
+</body></html>

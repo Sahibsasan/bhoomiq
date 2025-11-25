@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Work+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>BhoomIQ - Market Prices</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          primary: "#169c1d",
+          "background-light": "#f6f8f6",
+          "background-dark": "#112112",
+          "input-light": "#e9f0ea",
+          "input-dark": "#1e341f",
+          "text-light": "#112112",
+          "text-dark": "#f6f8f6",
+          "text-muted-light": "#546e56",
+          "text-muted-dark": "#a0bfa2",
+          "border-light": "#dde5de",
+          "border-dark": "#2a4d2c",
+        },
+        fontFamily: {
+          display: ["Work Sans"],
+        },
+        borderRadius: {
+          DEFAULT: "0.25rem",
+          lg: "0.5rem",
+          xl: "0.75rem",
+          full: "9999px"
+        },
+      },
+    },
+  };
+</script>
+<style>
+  body {
+    margin: 0;
+    background: #e5e7eb; /* neutral gray backdrop for desktop view */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .design-wrapper {
+    width: 390px;   /* fixed device width */
+    height: 884px;  /* fixed device height */
+    overflow-y: auto; /* Allow vertical scrolling within the wrapper */
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    position: relative; /* Needed for positioning the nav bar */
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>
+</head>
+<body class="font-display">
+<div class="design-wrapper flex h-full w-full flex-col bg-background-light dark:bg-background-dark no-scrollbar">
+
+  <div class="flex-grow pb-24"> <header class="flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm p-4 justify-between sticky top-0 z-10">
+      <a href = "landing.html">
+        <button class="text-text-light dark:text-text-dark flex size-10 items-center justify-center rounded-full">
+          <span class="material-symbols-outlined"> arrow_back </span>
+        </button></a>
+      <h1 class="text-text-light dark:text-text-dark text-xl font-bold flex-1 text-center pr-10">Market Prices</h1>
+    </header>
+
+    <main>
+      <div class="px-4 pt-4">
+        <div class="flex items-center overflow-x-auto pb-4 space-x-3 no-scrollbar">
+            <button class="px-4 py-2 rounded-full text-sm font-semibold bg-input-light dark:bg-input-dark text-text-muted-light dark:text-text-muted-dark flex-shrink-0">🌾 Rice</button>
+            <button class="px-4 py-2 rounded-full text-sm font-semibold bg-primary text-white flex-shrink-0 shadow-md">🎍 Sugarcane</button>
+            <button class="px-4 py-2 rounded-full text-sm font-semibold bg-input-light dark:bg-input-dark text-text-muted-light dark:text-text-muted-dark flex-shrink-0">🌾 Wheat</button>
+            <button class="px-4 py-2 rounded-full text-sm font-semibold bg-input-light dark:bg-input-dark text-text-muted-light dark:text-text-muted-dark flex-shrink-0">🌽 Maize</button>
+            <button class="px-4 py-2 rounded-full text-sm font-semibold bg-input-light dark:bg-input-dark text-text-muted-light dark:text-text-muted-dark flex-shrink-0">🥜 Groundnut</button>
+        </div>
+      </div>
+
+      <div class="px-4">
+        <h2 class="text-text-light dark:text-text-dark text-xl font-bold pt-2 pb-4">Sugarcane Prices in Punjab</h2>
+        <div class="space-y-3">
+
+          <div class="flex items-center gap-4 bg-white dark:bg-input-dark rounded-xl p-4 border-l-4 border-green-500 shadow-sm">
+            <div class="flex-grow">
+              <p class="text-text-light dark:text-text-dark text-lg font-bold">₹305/quintal</p>
+              <p class="text-text-muted-light dark:text-text-muted-dark text-sm">Ludhiana Mandi</p>
+            </div>
+            <div class="flex items-center gap-1 text-green-500 text-base font-bold">
+              <span class="material-symbols-outlined text-xl">arrow_drop_up</span>
+              <span>+₹15</span>
+            </div>
+          </div>
+          
+          <div class="flex items-center gap-4 bg-white dark:bg-input-dark rounded-xl p-4 border-l-4 border-green-500 shadow-sm">
+            <div class="flex-grow">
+              <p class="text-text-light dark:text-text-dark text-lg font-bold">₹300/quintal</p>
+              <p class="text-text-muted-light dark:text-text-muted-dark text-sm">Jalandhar Mandi</p>
+            </div>
+            <div class="flex items-center gap-1 text-green-500 text-base font-bold">
+              <span class="material-symbols-outlined text-xl">arrow_drop_up</span>
+              <span>+₹10</span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4 bg-white dark:bg-input-dark rounded-xl p-4 border-l-4 border-red-500 shadow-sm">
+            <div class="flex-grow">
+              <p class="text-text-light dark:text-text-dark text-lg font-bold">₹295/quintal</p>
+              <p class="text-text-muted-light dark:text-text-muted-dark text-sm">Patiala Mandi</p>
+            </div>
+            <div class="flex items-center gap-1 text-red-500 text-base font-bold">
+              <span class="material-symbols-outlined text-xl">arrow_drop_down</span>
+              <span>-₹5</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <nav class="sticky bottom-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-t border-border-light dark:border-border-dark w-full z-20">
+    <div class="flex justify-around items-center h-20">
+      <a class="flex flex-col items-center justify-center gap-1 text-text-muted-light dark:text-text-muted-dark w-1/3" href="#">
+        <span class="material-symbols-outlined">home</span>
+        <p class="text-xs font-medium">Home</p>
+      </a>
+
+      <div class="w-1/3 flex justify-center">
+        <a href="sellCrop.html" class="flex items-center justify-center -mt-12 size-16 bg-primary text-white rounded-full shadow-lg hover:bg-primary/90 transition-transform hover:scale-105">
+            <span class="material-symbols-outlined text-3xl">sell</span>
+        </a>
+      </div>
+
+      <a class="flex flex-col items-center justify-center gap-1 text-text-muted-light dark:text-text-muted-dark w-1/3" href="#">
+        <span class="material-symbols-outlined">settings</span>
+        <p class="text-xs font-medium">Settings</p>
+      </a>
+    </div>
+  </nav>
+</div>
+</body>
+</html>

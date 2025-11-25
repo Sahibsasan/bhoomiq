@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Work+Sans%3Awght%40400%3B500%3B700%3B900" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<title>BhoomIQ - Fasal Calendar</title>
+<link href="data:image/x-icon;base64," rel="icon" type="image/x-icon"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          primary: "#169c1d",
+          "background-light": "#f6f8f6",
+          "background-dark": "#112112",
+          "input-light": "#e9f0ea",
+          "input-dark": "#1e341f",
+          "text-light": "#112112",
+          "text-dark": "#f6f8f6",
+          "text-muted-light": "#546e56",
+          "text-muted-dark": "#a0bfa2",
+          "border-light": "#dde5de",
+          "border-dark": "#2a4d2c",
+        },
+        fontFamily: {
+          display: ["Work Sans"],
+        },
+        borderRadius: {
+          DEFAULT: "0.25rem",
+          lg: "0.5rem",
+          xl: "0.75rem",
+          full: "9999px"
+        },
+      },
+    },
+  };
+</script>
+<style>
+  body {
+    margin: 0;
+    background: #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .design-wrapper {
+    width: 390px;
+    height: 884px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    position: relative;
+  }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+</head>
+<body class="font-display">
+<div class="design-wrapper flex h-full w-full flex-col bg-background-light dark:bg-background-dark no-scrollbar">
+
+  <div class="flex-grow pb-24"> 
+    <header class="flex items-center bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm p-4 justify-between sticky top-0 z-10">
+      <a href = "landing.html">
+        <button class="text-text-light dark:text-text-dark flex size-10 items-center justify-center rounded-full">
+          <span class="material-symbols-outlined"> arrow_back </span>
+        </button></a>
+      <h1 class="text-text-light dark:text-text-dark text-xl font-bold flex-1 text-center pr-10">Fasal Calendar</h1>
+    </header>
+
+    <main class="p-4">
+      <div class="flex items-center justify-between mb-4">
+        <button class="p-2 rounded-full hover:bg-input-light dark:hover:bg-input-dark">
+          <span class="material-symbols-outlined text-text-muted-light dark:text-text-muted-dark">chevron_left</span>
+        </button>
+        <h2 class="font-bold text-lg text-text-light dark:text-text-dark">October 2025</h2>
+        <button class="p-2 rounded-full hover:bg-input-light dark:hover:bg-input-dark">
+          <span class="material-symbols-outlined text-text-muted-light dark:text-text-muted-dark">chevron_right</span>
+        </button>
+      </div>
+
+      <div class="grid grid-cols-7 gap-y-2 text-center text-sm">
+        <div class="font-medium text-text-muted-light dark:text-text-muted-dark">Su</div>
+        <div class="font-medium text-text-muted-light dark:text-text-muted-dark">Mo</div>
+        <div class="font-medium text-text-muted-light dark:text-text-muted-dark">Tu</div>
+        <div class="font-medium text-text-muted-light dark:text-text-muted-dark">We</div>
+        <div class="font-medium text-text-muted-light dark:text-text-muted-dark">Th</div>
+        <div class="font-medium text-text-muted-light dark:text-text-muted-dark">Fr</div>
+        <div class="font-medium text-text-muted-light dark:text-text-muted-dark">Sa</div>
+
+        <div class="text-gray-400 dark:text-gray-600">28</div>
+        <div class="text-gray-400 dark:text-gray-600">29</div>
+        <div class="text-gray-400 dark:text-gray-600">30</div>
+        
+        <div>1<div class="h-1 w-1 rounded-full bg-blue-500 mx-auto mt-1"></div></div>
+        <div>2<div class="h-1 w-1 rounded-full bg-blue-500 mx-auto mt-1"></div></div>
+        <div>3<div class="h-1 w-1 rounded-full bg-blue-500 mx-auto mt-1"></div></div>
+        <div>4<div class="h-1 w-1 rounded-full bg-blue-500 mx-auto mt-1"></div></div>
+        
+        <div>5<div class="h-1 w-1 rounded-full bg-blue-500 mx-auto mt-1"></div></div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10<div class="h-1 w-1 rounded-full bg-primary mx-auto mt-1"></div></div>
+        <div>11<div class="h-1 w-1 rounded-full bg-primary mx-auto mt-1"></div></div>
+        
+        <div>12<div class="h-1 w-1 rounded-full bg-primary mx-auto mt-1"></div></div>
+        <div>13<div class="h-1 w-1 rounded-full bg-primary mx-auto mt-1"></div></div>
+        <div>14<div class="h-1 w-1 rounded-full bg-primary mx-auto mt-1"></div></div>
+        <div>15<div class="h-1 w-1 rounded-full bg-primary mx-auto mt-1"></div></div>
+        <div>16<div class="h-1 w-1 rounded-full bg-primary mx-auto mt-1"></div></div>
+        <div>17<div class="h-1 w-1 rounded-full bg-primary mx-auto mt-1"></div></div>
+        <div>18<div class="h-1 w-1 rounded-full bg-primary mx-auto mt-1"></div></div>
+
+        <div>19<div class="h-1 w-1 rounded-full bg-primary mx-auto mt-1"></div></div>
+        <div>20<div class="h-1 w-1 rounded-full bg-primary mx-auto mt-1"></div></div>
+        <div>21<div class="h-1 w-1 rounded-full bg-primary mx-auto mt-1"></div></div>
+        <div>22<div class="h-1 w-1 rounded-full bg-primary mx-auto mt-1"></div></div>
+        <div>23<div class="h-1 w-1 rounded-full bg-primary mx-auto mt-1"></div></div>
+        <div>24<div class="h-1 w-1 rounded-full bg-primary mx-auto mt-1"></div></div>
+        <div>25<div class="h-1 w-1 rounded-full bg-primary mx-auto mt-1"></div></div>
+        
+        <div>26<div class="h-1 w-1 rounded-full bg-primary mx-auto mt-1"></div></div>
+        <div>27<div class="h-1 w-1 rounded-full bg-primary mx-auto mt-1"></div></div>
+        <div class="relative"><div class="absolute inset-0 flex items-center justify-center bg-primary text-white rounded-full">28</div><div class="h-1 w-1 rounded-full bg-primary mx-auto mt-6"></div></div>
+        <div>29<div class="h-1 w-1 rounded-full bg-primary mx-auto mt-1"></div></div>
+        <div>30<div class="h-1 w-1 rounded-full bg-primary mx-auto mt-1"></div></div>
+        <div>31<div class="h-1 w-1 rounded-full bg-primary mx-auto mt-1"></div></div>
+      </div>
+      
+      <div class="mt-6">
+        <h3 class="font-bold text-text-light dark:text-text-dark mb-3">Agenda for October 28</h3>
+        <div class="bg-white dark:bg-input-dark p-4 rounded-xl space-y-2 border-l-4 border-primary">
+          <p class="font-bold text-primary">Wheat: Sowing & Germination</p>
+          <div class="flex items-center text-sm text-text-muted-light dark:text-text-muted-dark">
+            <span class="material-symbols-outlined text-base mr-2">calendar_today</span>
+            <span>Full Period: Oct 25 - Nov 20, 2025</span>
+          </div>
+          <p class="text-sm text-text-light dark:text-text-dark pt-1">
+            Ensure proper seed treatment before sowing to prevent fungal diseases. Recommended seed depth is 4-5 cm for best results.
+          </p>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+  <nav class="sticky bottom-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-t border-border-light dark:border-border-dark w-full z-20">
+    <div class="flex justify-around items-center h-20">
+      <a class="flex flex-col items-center justify-center gap-1 text-text-muted-light dark:text-text-muted-dark w-1/3" href="#">
+        <span class="material-symbols-outlined">home</span>
+        <p class="text-xs font-medium">Home</p>
+      </a>
+      <div class="w-1/3 flex flex-col items-center">
+        <a href="#" class="flex items-center justify-center -mt-12 size-16 bg-primary text-white rounded-full shadow-lg hover:bg-primary/90 transition-transform hover:scale-105">
+            <span class="material-symbols-outlined text-3xl">add</span>
+        </a>
+        <p class="text-xs font-bold text-primary mt-1">Add Crop</p>
+      </div>
+      <a class="flex flex-col items-center justify-center gap-1 text-text-muted-light dark:text-text-muted-dark w-1/3" href="#">
+        <span class="material-symbols-outlined">settings</span>
+        <p class="text-xs font-medium">Settings</p>
+      </a>
+    </div>
+  </nav>
+</div>
+</body>
+</html>
